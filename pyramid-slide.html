@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <style>
+       #pyramid {
+         line-height: 0;
+         font-size: 30px;
+         color: #da71b7;
+       }
+       body {
+         font-family: "Courier New", monospace;
+         text-align: center;
+       }
+       .center {
+         background-color: #f5f5f0;
+         width: 60%;
+         border: 3px solid #da71b7;
+         padding: 25px;
+         margin: auto;
+       }
+       h1{
+         background-color: #da71b7;
+         color: #f5f5f0;
+         width: 56%;
+         border: 3px solid #da71b7;
+         padding: 25px;
+         margin: auto;
+       }
+       #container{
+         background-color: #f2f2f2;
+         width : 60%;
+         margin : auto;
+       }
+
+   </style>
+</head>
+<body>
+
+ <h1>Pyramid Slide</h1>
+<div id="container">
+<br><br>
+<div class="center">
+<p>Brick Symbol:<select id="combobox" oninput="drawPyramid()">
+                           <option value="X">X</option>
+                           <option value="@">@</option>
+                           <option value="$">$</option>
+                           <option value="#" selected>#</option></select>
+    How high?
+<input type="range" id="slide" value="10" min="0" max="20" oninput="drawPyramid()" onchange="pyramidHeight.value = slide.value" >
+ <output id="pyramidHeight">5</output></p>
+ <br><br>
+
+ <div id="pyramid"></div>
+</div>
+</div>
+ <script src="pyramid-slide.js"></script>
+
+
+</body>
+</html>
